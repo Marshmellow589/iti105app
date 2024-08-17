@@ -7,8 +7,8 @@ import streamlit as st
 model = pickle.load(open('model.pkl', 'rb'))
 
 def predict(X): 
-    y = model.predict(X)
-    return y
+    return model.predict(X)
+  
 
 def getInputs():
     st.button('Predict')
