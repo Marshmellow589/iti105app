@@ -4,7 +4,7 @@ import pickle
 
 import streamlit as st
 
-model = pickle.load(open('xgb_model.pkl', 'rb'),unsafe_allow_html=True,)
+model = pickle.load(open('xgb_model.pkl', 'rb'),unsafe_allow_html=True)
 
 def predict(X): 
     y = model.predict(X)
