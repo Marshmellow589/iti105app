@@ -11,8 +11,8 @@ def predict(X):
     return y
 
 def getInputs():
-     # st.button('Predict')
-    y = predict(df)
+    st.button('Predict')
+    y = predict(df1)
     return y[0] 
 
 if __name__ == "__main__":
@@ -25,9 +25,6 @@ if __name__ == "__main__":
     df=pd.read_csv(upload_file)
     df1=st.write(df)
 
-    # if uploaded_file:
-    #     df=pd.read_csv(upload_file)
-    #     st.write(df)
 
     if st.button("Run Analysis"):
         y = getInputs(df1)
