@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
 
     if st.button("Run Analysis"):
-        y = getInputs(df1)
+        y = getInputs( )
         st.write("Analysis completed!")
     if y is not None:
         if y == 0:
