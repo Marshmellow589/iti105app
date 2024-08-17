@@ -12,10 +12,12 @@ st.title('Depression & Mood Prediction App')
 
 st.header('Single File upload')
 upload_file=st.file_uploader("Upload your CSV File")
-df=pd.read_csv(upload_file)
+# df=pd.read_csv(upload_file)
 st.dataframe(df,width=1800,height=1200)
 
-
+if uploaded_file:
+    df = pd.read_csv(uploaded_file)
+    st.write(df)
 # load the model
 model = pickle.load(open('model.pkl', 'rb'))
 
