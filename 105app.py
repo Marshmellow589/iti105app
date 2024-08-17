@@ -19,7 +19,7 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
     st.write(df)
 # load the model
-model = pickle.load(open('model.pkl', 'rb'))
+# model = pickle.load(open('model.pkl', 'rb'))
 
 def predict(X): 
     y = model.predict(X)
@@ -31,6 +31,10 @@ def getInputs():
         return y[0] 
 
 if __name__ == "__main__":
+    try:
+    model = pickle.load(open('model.pkl', 'rb'))
+except Exception as e:
+    st.error(f"Error loading model: {e}")
     y = getInputs()
     if st.button("Run Analysis"):
         y = getInputs()
