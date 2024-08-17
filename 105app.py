@@ -2,9 +2,8 @@ import pandas as pd
 
 import pickle
 
-# create a streamlit app
-
 import streamlit as st
+
 model = pickle.load(open('model.pkl', 'rb'))
 
 def predict(X): 
