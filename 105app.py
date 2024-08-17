@@ -26,9 +26,9 @@ def predict(X):
     return y
 
 def getInputs():
-     st.button('Predict'):
-        y = predict(df)
-        return y[0] 
+     # st.button('Predict')
+    y = predict(df)
+    return y[0] 
 
 if __name__ == "__main__":
 
