@@ -32,7 +32,9 @@ def getInputs():
 
 if __name__ == "__main__":
     y = getInputs()
-    
+    if st.button("Run Analysis"):
+        y = getInputs()
+        st.write("Analysis completed!")
     if y is not None:
         if y == 0:
             st.write('Predicted Heart Failure: No')
